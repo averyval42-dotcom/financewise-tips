@@ -6,8 +6,8 @@ app = Flask(__name__)
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7781420388869679"
-     crossorigin="anonymous"></script>
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7781420388869679" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceWise Tips - Professional Personal Finance Blog</title>
@@ -30,7 +30,7 @@ html_code = """
         nav ul li a { color: #ddd; text-decoration: none; font-weight: bold; transition: color 0.3s; }
         nav ul li a:hover { color: #fff; }
         .hero { background: linear-gradient(135deg, #0056b3, #007bff); color: #fff; text-align: center; padding: 100px 20px; animation: slideInHero 1s ease; }
-        @keyframes slideInHero { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+        @keyframes slideInHero { from { transform: translateX(-100%); } to { transform: translateY(0); } }
         .hero h2 { font-size: 48px; margin: 0; animation: bounceText 2s infinite; }
         @keyframes bounceText { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
         .hero p { font-size: 24px; margin: 10px 0; }
@@ -81,6 +81,9 @@ html_code = """
             <li><a href="#credit">Credit</a></li>
             <li><a href="#debt">Debt Management</a></li>
             <li><a href="#passive">Passive Income</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -98,7 +101,6 @@ html_code = """
                     <p>Short intro: Discover the best apps to track your spending and save more. Budgeting is essential for financial stability...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(1); return false;">Read More</a>
                     <div id="full1" class="full-post">
-                        <h4>Top 5 Budgeting Apps for 2025</h4>
                         <p>In 2025, budgeting apps have evolved to include AI-driven insights and seamless integration with bank accounts. This makes managing finances easier than ever. Let's explore the top five apps that can help you take control of your money.</p>
                         <p><strong>1. Mint</strong>: Mint is a free app from Intuit that automatically tracks and categorizes your expenses. It provides real-time alerts for bills and unusual spending, helps you create budgets, and even monitors your credit score. Pros: Free, user-friendly interface. Cons: Ads in the free version. Ideal for beginners who want a hands-off approach.</p>
                         <p><strong>2. YNAB (You Need A Budget)</strong>: YNAB focuses on giving every dollar a job, teaching you to budget proactively. It offers educational resources and syncs across devices. Price: $14.99/month or $99/year. Pros: Builds good habits, detailed reporting. Cons: Learning curve. Best for those serious about changing their financial behavior.</p>
@@ -113,7 +115,6 @@ html_code = """
                     <p>Short intro: Beginner guide to stocks, crypto, and ETFs. Investing doesn't require thousands to start...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(2); return false;">Read More</a>
                     <div id="full2" class="full-post">
-                        <h4>How to Start Investing with $100</h4>
                         <p>Starting with $100 is achievable in 2025 thanks to fractional shares and accessible platforms. Here’s how:</p>
                         <ol>
                             <li><strong>Open a Brokerage Account</strong>: Use Robinhood, E*Trade, or Fidelity for low or no fees.</li>
@@ -130,7 +131,6 @@ html_code = """
                     <p>Short intro: Practical tips for building an emergency fund. Saving is the foundation of financial freedom...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(3); return false;">Read More</a>
                     <div id="full3" class="full-post">
-                        <h4>Save $10,000 in a Year: Step-by-Step Plan</h4>
                         <p>Goal: $833/month. Follow these steps to build your emergency fund:</p>
                         <ol>
                             <li><strong>Track Expenses</strong>: Monitor spending for one week using a notebook or app.</li>
@@ -147,7 +147,6 @@ html_code = """
                     <p>Short intro: Best cards for cashback and travel points. Credit cards can be a tool, not a trap...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(4); return false;">Read More</a>
                     <div id="full4" class="full-post">
-                        <h4>Credit Card Rewards: Maximize Your Benefits</h4>
                         <p>Top credit cards for 2025 rewards:</p>
                         <ul>
                             <li><strong>Chase Sapphire Preferred</strong>: Earn 2x points on travel, plus a 60,000-point sign-up bonus.</li>
@@ -162,7 +161,6 @@ html_code = """
                     <p>Short intro: Get out of debt with snowball and avalanche methods. Debt is a burden—let's lift it...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(5); return false;">Read More</a>
                     <div id="full5" class="full-post">
-                        <h4>Debt Free in 2025: Proven Strategies</h4>
                         <p>Two popular methods to eliminate debt:</p>
                         <ul>
                             <li><strong>Snowball Method</strong>: Pay off smallest debts first for quick wins, boosting motivation.</li>
@@ -176,7 +174,6 @@ html_code = """
                     <p>Short intro: Earn money while you sleep with these tips. Passive income is the key to wealth...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(6); return false;">Read More</a>
                     <div id="full6" class="full-post">
-                        <h4>Passive Income Ideas for Beginners</h4>
                         <p>Five ways to start passive income with minimal effort:</p>
                         <ol>
                             <li><strong>Dividend Stocks</strong>: Invest in companies like Coca-Cola for quarterly payouts.</li>
@@ -193,7 +190,6 @@ html_code = """
                     <p>Short intro: Start early to retire rich. Time is your biggest asset...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(7); return false;">Read More</a>
                     <div id="full7" class="full-post">
-                        <h4>Retirement Planning in Your 20s</h4>
                         <p>Steps to secure your future:</p>
                         <ol>
                             <li><strong>Open a 401(k) or IRA</strong>: Start with your employer’s plan or a Roth IRA.</li>
@@ -209,7 +205,6 @@ html_code = """
                     <p>Short intro: Navigate the crypto market safely. Bitcoin, Ethereum, and beyond...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(8); return false;">Read More</a>
                     <div id="full8" class="full-post">
-                        <h4>Crypto Investing Basics for 2025</h4>
                         <p>Guide to entering the crypto world:</p>
                         <ol>
                             <li><strong>Understand Blockchain</strong>: Learn how transactions are secured.</li>
@@ -226,7 +221,6 @@ html_code = """
                     <p>Short intro: Navigate the market in 2025. From mortgage to closing...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(9); return false;">Read More</a>
                     <div id="full9" class="full-post">
-                        <h4>Home Buying Tips for First-Timers</h4>
                         <p>Steps to buy your first home:</p>
                         <ol>
                             <li><strong>Check Credit Score</strong>: Aim for 700+ for better rates.</li>
@@ -243,7 +237,6 @@ html_code = """
                     <p>Short intro: Earn extra money in 2025. From freelancing to gig economy...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(10); return false;">Read More</a>
                     <div id="full10" class="full-post">
-                        <h4>Side Hustle Ideas to Boost Income</h4>
                         <p>Top side hustles to try:</p>
                         <ol>
                             <li><strong>Freelance Writing</strong>: Write for Upwork or Fiverr ($20-$50/hour).</li>
@@ -260,7 +253,6 @@ html_code = """
                     <p>Short intro: Reduce your tax bill legally. Deductions, credits, and more...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(11); return false;">Read More</a>
                     <div id="full11" class="full-post">
-                        <h4>Tax Saving Strategies for 2025</h4>
                         <p>Ways to lower your tax liability:</p>
                         <ul>
                             <li><strong>Max Retirement Contributions</strong>: Add to 401(k) or IRA (up to $7,000 in 2025).</li>
@@ -277,7 +269,6 @@ html_code = """
                     <p>Short intro: Set SMART goals for wealth building. From short-term to long-term...</p>
                     <a href="#" class="btn" onclick="toggleFullPost(12); return false;">Read More</a>
                     <div id="full12" class="full-post">
-                        <h4>Financial Goal Setting Guide</h4>
                         <p>Use the SMART framework: Specific, Measurable, Achievable, Relevant, Time-bound. Example: Save $5,000 for a vacation in 6 months.</p>
                         <ol>
                             <li><strong>List Goals</strong>: Write down short-term (1 year) and long-term (10+ years).</li>
@@ -285,6 +276,54 @@ html_code = """
                             <li><strong>Break Down</strong>: Divide into monthly targets (e.g., $833/month).</li>
                         </ol>
                         <p><strong>Tip</strong>: Track progress weekly with a journal or app. <strong>More Tips</strong>: Use GoalsOnTrack, celebrate milestones (e.g., $1,000 saved), and adjust as life changes. <strong>Success Story</strong>: Achieved a home down payment in 2 years. <strong>Pro Tip</strong>: Align goals with personal values (e.g., travel, security). <strong>Resources</strong>: MindTools.com. <strong>Conclusion</strong>: Clear goals turn dreams into achievements.</p>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <h3>Building an Emergency Fund in 2025</h3>
+                    <p>Short intro: Life is unpredictable—build an emergency fund to stay secure! Aim for 3-6 months of expenses ($3,000-$6,000) to cover job loss or repairs.</p>
+                    <a href="#" class="btn" onclick="toggleFullPost(13); return false;">Read More</a>
+                    <div id="full13" class="full-post">
+                        <p>With economic uncertainties, an emergency fund is your safety net. Here's how to build one step by step:</p>
+                        <ol>
+                            <li><strong>Calculate Needs</strong>: Estimate 3-6 months of living expenses (rent, food, bills).</li>
+                            <li><strong>Start Small</strong>: Save $1,000 first, then add $100/month.</li>
+                            <li><strong>Choose the Right Account</strong>: Use a high-yield savings account (4-5% APY in 2025).</li>
+                            <li><strong>Automate Transfers</strong>: Set up auto-deposits from your paycheck.</li>
+                            <li><strong>Avoid Temptation</strong>: Keep it separate from your checking account.</li>
+                        </ol>
+                        <p><strong>Tip</strong>: Treat it like a bill—pay yourself first. <strong>More Tips</strong>: Cut one coffee a week to fund it, use apps like Acorns for micro-savings, and review quarterly. <strong>Success Story</strong>: A user saved $5,000 in 6 months by skipping takeout. <strong>Pro Tip</strong>: Once built, don't touch it except for true emergencies. <strong>Resources</strong>: Bankrate.com for calculators. <strong>Conclusion</strong>: An emergency fund brings peace of mind and prevents debt spirals.</p>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <h3>Crypto Investing for Beginners in 2025</h3>
+                    <p>Short intro: Navigate the crypto market safely. Bitcoin, Ethereum, and beyond...</p>
+                    <a href="#" class="btn" onclick="toggleFullPost(14); return false;">Read More</a>
+                    <div id="full14" class="full-post">
+                        <p>Crypto is volatile but rewarding—start smart:</p>
+                        <ol>
+                            <li><strong>Learn Basics</strong>: Understand blockchain and wallets.</li>
+                            <li><strong>Choose a Platform</strong>: Use Coinbase or Binance for easy buys.</li>
+                            <li><strong>Start Small</strong>: Invest $50 in Bitcoin or Ethereum.</li>
+                            <li><strong>Diversify</strong>: Add stablecoins like USDC for safety.</li>
+                            <li><strong>Secure it</strong>: Use a hardware wallet like Ledger.</li>
+                        </ol>
+                        <p><strong>Tip</strong>: Only invest what you can lose. <strong>More Tips</strong>: Use dollar-cost averaging (buy weekly), follow news on CoinDesk, and avoid FOMO. <strong>Success Story</strong>: A beginner doubled $100 in 6 months. <strong>Pro Tip</strong>: Track taxes with tools like Koinly. <strong>Resources</strong>: CoinMarketCap.com. <strong>Conclusion</strong>: Educate yourself—crypto can be part of a balanced portfolio.</p>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <h3>Tax-Saving Strategies for Freelancers</h3>
+                    <p>Short intro: Freelancers, save big on taxes! Deduct home office, equipment, and more—up to 30% savings in 2025.</p>
+                    <a href="#" class="btn" onclick="toggleFullPost(15); return false;">Read More</a>
+                    <div id="full15" class="full-post">
+                        <p>As a freelancer, you can deduct business expenses to lower your tax bill:</p>
+                        <ol>
+                            <li><strong>Home Office Deduction</strong>: Claim space used for work (up to $5/sq ft).</li>
+                            <li><strong>Equipment</strong>: Deduct laptops, software, and supplies (Section 179 for up to $1M).</li>
+                            <li><strong>Travel and Meals</strong>: 50% of business meals, full travel costs.</li>
+                            <li><strong>Retirement Contributions</strong>: SEP-IRA up to 25% of income.</li>
+                            <li><strong>Health Insurance</strong>: Deduct premiums if self-employed.</li>
+                        </ol>
+                        <p><strong>Tip</strong>: Track everything with QuickBooks Self-Employed. <strong>More Tips</strong>: Pay quarterly taxes to avoid penalties, use Schedule C for deductions, and consult a tax pro. <strong>Success Story</strong>: A freelancer saved $4,000 by deducting a home office. <strong>Pro Tip</strong>: Keep receipts for audits. <strong>Resources</strong>: IRS.gov/freelancers. <strong>Conclusion</strong>: Smart deductions turn freelance income into take-home pay.</p>
                     </div>
                 </div>
             </div>
@@ -302,22 +341,27 @@ html_code = """
             <p>Social: Follow us on X, Facebook, LinkedIn for daily tips.</p>
             <p>Support: For inquiries, fill the form below or email us directly.</p>
             <p>Hours: Monday-Friday, 9 AM - 5 PM WAT</p>
-            <form method="POST" action="/">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone Number (Optional):</label>
-                <input type="tel" id="phone" name="phone">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
+                <textarea id="message" required></textarea>
+                <button type="submit" class="btn">Send</button>
             </form>
-            {% if message_sent %}
-                <p style="color: green;">Message sent successfully! We will respond soon.</p>
-            {% endif %}
+        </section>
+        <section id="about" class="category-section">
+            <h2>About Us</h2>
+            <p>FinanceWise Tips is your go-to source for practical financial advice. We cover budgeting, investing, saving, and more to help you achieve financial freedom. Our team of experts provides actionable insights for beginners and pros alike.</p>
+        </section>
+        <section id="privacy" class="category-section">
+            <h2>Privacy Policy</h2>
+            <p>At FinanceWise Tips, we respect your privacy. We collect only necessary data for site functionality and do not share it with third parties. For details, contact us at averyval42@yahoo.com.</p>
+        </section>
+        <section id="terms" class="category-section">
+            <h2>Terms of Service</h2>
+            <p>By using FinanceWise Tips, you agree to our terms. Content is for informational purposes only. We are not liable for financial decisions based on our advice. For questions, email averyval42@yahoo.com.</p>
         </section>
     </div>
     <footer>
@@ -343,6 +387,10 @@ html_code = """
         document.querySelector('.newsletter button').addEventListener('click', function() {
             alert('Subscribed! Thank you for joining FinanceWise Tips.');
         });
+        document.querySelector('.contact-section form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Message sent! We will get back to you soon.');
+        });
     </script>
 </body>
 </html>
@@ -357,7 +405,6 @@ def home():
         phone = request.form.get('phone')
         subject = request.form.get('subject')
         message = request.form.get('message')
-        # For now, print to Termux console; later, add email with smtplib
         print(f"Message from {name} ({email}, {phone}): Subject - {subject}, Message - {message}")
         message_sent = True
     return render_template_string(html_code, message_sent=message_sent)
