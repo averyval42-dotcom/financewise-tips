@@ -6,7 +6,8 @@ app = Flask(__name__)
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7781420388869679"
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceWise Tips - Professional Personal Finance Blog</title>
